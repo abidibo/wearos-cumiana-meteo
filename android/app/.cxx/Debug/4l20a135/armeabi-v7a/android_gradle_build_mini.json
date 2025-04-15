@@ -1,0 +1,20 @@
+{
+  "buildFiles": [
+    "/home/abidibo/Applications/flutter/packages/flutter_tools/gradle/src/main/groovy/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/home/abidibo/Android/Sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/home/abidibo/WearOs/cumiana_meteo/android/app/.cxx/Debug/4l20a135/armeabi-v7a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/home/abidibo/Android/Sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/home/abidibo/WearOs/cumiana_meteo/android/app/.cxx/Debug/4l20a135/armeabi-v7a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {}
+}
