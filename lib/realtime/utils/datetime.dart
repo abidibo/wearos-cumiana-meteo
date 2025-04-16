@@ -1,4 +1,16 @@
+
 String formatDateString(String dateString) {
+  // Extract the day (characters 8 and 9)
+  final day = dateString.substring(8, 10);
+
+  // Extract the month (characters 5 and 6)
+  final month = dateString.substring(5, 7);
+
+  // Combine the extracted parts in the desired format
+  return '$day/$month';
+}
+
+String formatDatetimeString(String dateString) {
   // Extract the day (characters 8 and 9)
   final day = dateString.substring(8, 10);
 

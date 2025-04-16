@@ -67,16 +67,21 @@ class RealtimeData {
     return const Color(0xFFD84315);
   }
 
-  Widget data(Screen screen, ThemeData theme) {
+  Widget data(BuildContext context, Screen screen, ThemeData theme) {
     switch (screen) {
       case Screen.temperature:
         return Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
-              '$temperature ',
-              style: theme.textTheme.displaySmall?.copyWith(
-                color: tempColor(temperature),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, "/charts");
+              },
+              child: Text(
+                '$temperature ',
+                style: theme.textTheme.displaySmall?.copyWith(
+                  color: tempColor(temperature),
+                ),
               ),
             ),
             const Text('°C', style: TextStyle(fontSize: 16)),

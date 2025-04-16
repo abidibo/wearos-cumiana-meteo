@@ -31,7 +31,11 @@ class App extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,
-          home: child,
+          routes: {
+            '/': (context) => child!, // This is your home route
+            '/charts': (context) => const RealtimeChartsPage(), // The new route
+          },
+          initialRoute: '/', // Set the home route as the initial route
         );
       },
     );

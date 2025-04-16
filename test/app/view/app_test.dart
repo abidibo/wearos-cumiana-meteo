@@ -1,6 +1,5 @@
 import 'package:net.abidibo.wearos.cumianameteo/ambient_mode/ambient_mode.dart';
 import 'package:net.abidibo.wearos.cumianameteo/app/app.dart';
-import 'package:net.abidibo.wearos.cumianameteo/realtime/realtime.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 

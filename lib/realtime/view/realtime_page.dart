@@ -168,7 +168,7 @@ class DatetimeText extends StatelessWidget {
     final date = context
         .select((StationCubit cubit) => cubit.state.realtimeData?.datetime);
     if (date == '' || date == null) return const Text('');
-    return Text(formatDateString(date), style: const TextStyle(fontSize: 10));
+    return Text(formatDatetimeString(date), style: const TextStyle(fontSize: 10));
   }
 }
 
@@ -194,9 +194,9 @@ class DataText extends StatelessWidget {
     final theme = Theme.of(context);
     final w = context.select(
       (StationCubit cubit) =>
-          cubit.state.realtimeData?.data(cubit.state.screen, theme),
+          cubit.state.realtimeData?.data(context, cubit.state.screen, theme),
     );
-    if (w == null) return const Text('');
+    if (w == null) return const Text('Loading...');
     return w;
   }
 }
