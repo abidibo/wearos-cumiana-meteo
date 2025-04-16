@@ -2,7 +2,7 @@
     <uses-feature android:name="android.hardware.type.watch" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <application
-        android:label="cumiana_meteo"
+        android:label="Cumiana Meteo"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

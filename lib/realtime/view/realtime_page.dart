@@ -1,10 +1,10 @@
 import 'dart:async';
 import 'dart:convert'; // For jsonDecode
 
-import 'package:cumiana_meteo/counter/cubit/station_cubit.dart';
-import 'package:cumiana_meteo/counter/model/realtime_data.dart';
-import 'package:cumiana_meteo/counter/utils/datetime.dart';
-import 'package:cumiana_meteo/l10n/l10n.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/cubit/station_cubit.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/model/realtime_data.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/utils/datetime.dart';
+import 'package:net.abidibo.wearos.cumianameteo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
@@ -12,8 +12,8 @@ import 'package:wearable_rotary/wearable_rotary.dart' as wearable_rotary
     show rotaryEvents;
 import 'package:wearable_rotary/wearable_rotary.dart' hide rotaryEvents;
 
-class CounterPage extends StatelessWidget {
-  const CounterPage({super.key});
+class RealtimePage extends StatelessWidget {
+  const RealtimePage({super.key});
 
   @override
   Widget build(BuildContext context) {

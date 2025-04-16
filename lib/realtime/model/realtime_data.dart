@@ -1,4 +1,4 @@
-import 'package:cumiana_meteo/counter/cubit/station_cubit.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/cubit/station_cubit.dart';
 import 'package:flutter/material.dart';
 
 class RealtimeData {

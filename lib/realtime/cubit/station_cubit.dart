@@ -1,5 +1,5 @@
 import 'package:bloc/bloc.dart';
-import 'package:cumiana_meteo/counter/model/realtime_data.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/model/realtime_data.dart';
 
 enum Screen {
   temperature,

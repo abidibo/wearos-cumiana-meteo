@@ -92,7 +92,7 @@ This project relies on [flutter_localizations][flutter_localizations_link] and f
 3. Use the new string
 
 ```dart
-import 'package:cumiana_meteo/l10n/l10n.dart';
+import 'package:net.abidibo.wearos.cumianameteo/l10n/l10n.dart';
 
 @override
 Widget build(BuildContext context) {

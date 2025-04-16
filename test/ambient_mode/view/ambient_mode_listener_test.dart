@@ -1,4 +1,4 @@
-import 'package:cumiana_meteo/ambient_mode/ambient_mode.dart';
+import 'package:net.abidibo.wearos.cumianameteo/ambient_mode/ambient_mode.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import '../../helpers/helpers.dart';

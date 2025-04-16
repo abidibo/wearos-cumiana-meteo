@@ -1,4 +1,4 @@
-name: "cumiana_meteo"
+name: "net.abidibo.wearos.cumianameteo"
 description: A new Flutter WearOS project.
 version: 1.0.0+1
 publish_to: none

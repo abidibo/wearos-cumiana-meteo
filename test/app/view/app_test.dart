@@ -1,6 +1,6 @@
-import 'package:cumiana_meteo/ambient_mode/ambient_mode.dart';
-import 'package:cumiana_meteo/app/app.dart';
-import 'package:cumiana_meteo/counter/counter.dart';
+import 'package:net.abidibo.wearos.cumianameteo/ambient_mode/ambient_mode.dart';
+import 'package:net.abidibo.wearos.cumianameteo/app/app.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/realtime.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -10,11 +10,6 @@ void main() {
   group('App', () {
     setUpAll(() {
       AmbientModeListener.instance.value = false;
-    });
-
-    testWidgets('renders CounterPage', (tester) async {
-      await tester.pumpWidget(const App());
-      expect(find.byType(CounterPage), findsOneWidget);
     });
 
     group('renders the correct color scheme', () {

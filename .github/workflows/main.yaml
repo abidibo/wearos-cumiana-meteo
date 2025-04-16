@@ -1,4 +1,4 @@
-name: cumiana_meteo
+name: net.abidibo.wearos.cumianameteo
 
 concurrency:
   group: $-$

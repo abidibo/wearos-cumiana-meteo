@@ -29,7 +29,7 @@ if (keystorePropertiesFile.exists()) {
 }
 
 android {
-    namespace "com.example.verygoodcore.cumiana_meteo"
+    namespace "net.abidibo.wearos.cumianameteo"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -47,7 +47,7 @@ android {
     }
 
     defaultConfig {
-        applicationId "com.example.verygoodcore.cumiana_meteo"
+        applicationId "net.abidibo.wearos.cumianameteo"
         minSdkVersion 30
         targetSdkVersion 32
         versionCode flutterVersionCode.toInteger()

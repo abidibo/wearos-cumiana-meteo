@@ -1,6 +1,6 @@
-import 'package:cumiana_meteo/ambient_mode/ambient_mode.dart';
-import 'package:cumiana_meteo/counter/counter.dart';
-import 'package:cumiana_meteo/l10n/l10n.dart';
+import 'package:net.abidibo.wearos.cumianameteo/ambient_mode/ambient_mode.dart';
+import 'package:net.abidibo.wearos.cumianameteo/realtime/realtime.dart';
+import 'package:net.abidibo.wearos.cumianameteo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 
 class App extends StatelessWidget {
@@ -9,7 +9,7 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AmbientModeBuilder(
-      child: const CounterPage(),
+      child: const RealtimePage(),
       builder: (context, isAmbientModeActive, child) {
         return MaterialApp(
           theme: ThemeData(
