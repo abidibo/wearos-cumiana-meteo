@@ -4,7 +4,6 @@ import 'dart:convert'; // For jsonDecode
 import 'package:net.abidibo.wearos.cumianameteo/realtime/cubit/station_cubit.dart';
 import 'package:net.abidibo.wearos.cumianameteo/realtime/model/realtime_data.dart';
 import 'package:net.abidibo.wearos.cumianameteo/realtime/utils/datetime.dart';
-import 'package:net.abidibo.wearos.cumianameteo/l10n/l10n.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:http/http.dart' as http;
@@ -116,21 +115,23 @@ class _StationViewState extends State<StationView> {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final l10n = context.l10n;
-
     return Scaffold(
       body: SizedBox.expand(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Text('Cumiana',
-                style: TextStyle(fontWeight: FontWeight.bold),),
+            const Text(
+              'Cumiana',
+              style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 24,
+                  color: Color(0xFFBDBDBD),),
+            ),
             const DatetimeText(),
             const SizedBox(
               height: 5,
             ),
-            const LabelText(),
+            // const LabelText(),
             const DataText(),
             const DataExtremes(),
             const SizedBox(height: 2),
@@ -164,11 +165,10 @@ class DatetimeText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
     final date = context
         .select((StationCubit cubit) => cubit.state.realtimeData?.datetime);
     if (date == '' || date == null) return const Text('');
-    return Text(formatDateString(date));
+    return Text(formatDateString(date), style: const TextStyle(fontSize: 10));
   }
 }
 
@@ -177,11 +177,12 @@ class LabelText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final label = context.select((StationCubit cubit) =>
-        cubit.state.realtimeData?.label(cubit.state.screen),);
+    final label = context.select(
+      (StationCubit cubit) =>
+          cubit.state.realtimeData?.label(cubit.state.screen),
+    );
     if (label == null) return const Text('');
-    return Text(label);
+    return Text(label, style: const TextStyle(fontSize: 10));
   }
 }
 
@@ -191,19 +192,12 @@ class DataText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final data = context.select((StationCubit cubit) =>
-        cubit.state.realtimeData?.data(cubit.state.screen),);
-    final screen = context.select((StationCubit cubit) =>
-        cubit.state.screen,);
-    if (data == null) return const Text('');
-    if (screen == Screen.weather) {
-      return Image.network(
-        width: 60,
-        height: 60,
-        data,
-      );
-    }
-    return Text(data, style: theme.textTheme.displaySmall);
+    final w = context.select(
+      (StationCubit cubit) =>
+          cubit.state.realtimeData?.data(cubit.state.screen, theme),
+    );
+    if (w == null) return const Text('');
+    return w;
   }
 }
 
@@ -212,9 +206,10 @@ class DataExtremes extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-    final row = context.select((StationCubit cubit) =>
-        cubit.state.realtimeData?.dataExtremes(cubit.state.screen),);
+    final row = context.select(
+      (StationCubit cubit) =>
+          cubit.state.realtimeData?.dataExtremes(cubit.state.screen),
+    );
     if (row == null) return const Text('');
     return row;
   }
