@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tile_label">Cumiana Meteo</string>
+    <string name="tile_loading">—</string>
+    <string name="tile_unit_celsius">°C</string>
+    <string name="tile_station">Cumiana</string>
+    <string name="tile_no_data">No data</string>
+</resources>
